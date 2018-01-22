@@ -20,11 +20,15 @@ function javascript_vars_function () {
     var vars = getVars(p);
 
     for (var i = 0; i < vars.length; i++) {
+       path = (path.indexOf('?') > -1 ? path = path + "&" : path = path + "?")
         if (vars[i].p == "id") {
-            path = path + "?" + vars[i].p + "=" + vars[i].v;
+            path = path + vars[i].p + "=" + vars[i].v;
         }
         else if (vars[i].p == "aud_c") {
-            path = path + "&" + vars[i].p + "=" + vars[i].v;
+            path = path + vars[i].p + "=" + vars[i].v;
+        }
+        else {
+          path = window.location.pathname;
         }
       }
       console.log("path - Results - Start");
