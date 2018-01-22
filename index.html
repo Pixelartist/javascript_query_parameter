@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <title>Read & Parse attached query parameter</title>
   </head>
+  <script src="js/query_ops.js"></script>
   <body>
     <h1>Javascript Query Parameter Test</h1>
-    <input type="button" value="Refresh Page with 1 parameter" onClick="window.location.href=window.location.href += '?param=42';">
-    <input type="button" value="Refresh Page with 2 parameter" onClick="window.location.href=window.location.href += '?param=42&id=666';">
+    <h4>Mission:</h4>
+    <p>Read the variables "id" and "aud_c" and return them by javascript</p>
+    <input type="button" value="Refresh Page with neutral parameter" onClick="window.location.href=window.location.href += '?param=42';">
+    <input type="button" value="Refresh Page with ID" onClick="window.location.href=window.location.href += '?id=333';">
+    <input type="button" value="Refresh Page with aud_c" onClick="window.location.href=window.location.href += '?aud_c=666';">
+    <input type="button" value="Refresh Page with id and aud_c" onClick="window.location.href=window.location.href += '?id=333&aud_c=999';">
+    <input type="button" value="Refresh Page all parameters" onClick="window.location.href=window.location.href += '?param=42&id=333&aud_c=999';">
+    <script>javascript_vars_function();</script>
   </body>
 </html>
