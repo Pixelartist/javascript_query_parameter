@@ -31,8 +31,8 @@ function javascript_vars_function () {
           path = window.location.pathname;
         }
       }
-      console.log("path - Results - Start");
-    console.log(path);
-      console.log("path - Results - End");
+    //  console.log("path - Results - Start");
+    //console.log(path);
+    //  console.log("path - Results - End");
     return path;
 }
