@@ -26,7 +26,9 @@ function javascript_vars_function () {
         else if (vars[i].p == "aud_c") {
             path = path + "&" + vars[i].p + "=" + vars[i].v;
         }
-    }
+      }
+      console.log("path - Results - Start");
     console.log(path);
+      console.log("path - Results - End");
     return path;
 }
